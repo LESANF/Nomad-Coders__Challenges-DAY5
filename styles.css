@@ -1,0 +1,72 @@
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bigframe {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigframe .button {
+  height: 7%;
+  width: 20%;
+  margin-bottom: 70px;
+  background-color: gray;
+}
+
+.bigframe .button:hover {
+  animation: 2s frame__button ease-in-out forwards;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+
+.button span {
+  font-size: 30px;
+  color: white;
+}
+
+@keyframes frame__button {
+  from {
+  }
+  to {
+    opacity: 0.5;
+    box-shadow: 0 30px 60px 20px black, 0 18px 36px -18px rgba(0, 0, 0, 0.3),
+      0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  }
+}
+
+.bigframe img {
+  height: 25%;
+  width: 15%;
+  transition: border 0.5s ease-in-out, transform 1s ease-in-out;
+}
+
+.bigframe img:hover {
+  border: 5px solid black;
+  animation: 2s frame__ani ease-in-out forwards;
+}
+
+@keyframes frame__ani {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotate(135deg);
+    transition: border 2s ease-in-out;
+  }
+}
